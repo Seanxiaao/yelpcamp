@@ -1,0 +1,22 @@
+<%include ./partials/header.ejs%>
+
+<div class="container">
+    <h1 style="text-align: center">Add your favorite Scene</h1>
+    <div style="width: 30%; margin: 20px auto;">
+        <form action="/senerio" method="post">
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Scene name" name="name">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="url" name="url">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="description" name="description">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+            </div>
+        </form>
+        <a href="/senerio">go back to the scenerios</a>
+    </div>
+</div>

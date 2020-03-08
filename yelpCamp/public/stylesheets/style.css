@@ -1,0 +1,84 @@
+body {
+  background-color: black;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+
+#landing-header h1 {
+  color: #fff;
+}
+
+.slideshow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite;
+}
+
+.slideshow li:nth-child(1) {
+  background-image: url(https://media.cntraveler.com/photos/5cb63a087b743b471660a8da/master/w_820,c_limit/Angel-Falls-Venezuela_GettyImages-165513023.jpg)
+}
+.slideshow li:nth-child(2) {
+  background-image: url(https://media.cntraveler.com/photos/5cb63a087b743b350a60a8d9/master/w_820,c_limit/Antarctica-_GettyImages-148815908.jpg);
+  animation-delay: 10s;
+}
+.slideshow li:nth-child(3) {
+  background-image: url(https://media.cntraveler.com/photos/5cb63a076b5c4d5dcc5ec14a/master/w_820,c_limit/Antelope-Canyon-AZ_GettyImages-164342990.jpg);
+  animation-delay: 20s;
+}
+.slideshow li:nth-child(4) {
+  background-image: url(https://media.cntraveler.com/photos/5cb896b82721dd144b749295/master/w_820,c_limit/GettyImages-rh94-1911.jpg);
+  animation-delay: 30s;
+}
+.slideshow li:nth-child(5) {
+  background-image: url(https://media.cntraveler.com/photos/5cb63a1711a45e6c99303730/master/w_820,c_limit/Disko-Bay-Greenland_GettyImages-975897188.jpg);
+  animation-delay: 40s;
+}
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - class added by modernizr */
+.no-cssanimations .slideshow li {
+  opacity: 1;
+}
+

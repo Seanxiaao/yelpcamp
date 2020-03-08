@@ -1,0 +1,32 @@
+<%include ./partials/header.ejs%>
+
+<div class="container">
+    <header class="jumbotron" style="margin: 1% auto">
+        <div class="container-inner">
+            <h1>Come to see where you want to explore</h1>
+            <p>Here is all the Beautiful places in the world!</p>
+            <p>
+                <a class="btn btn-info btn-large" href="/senerio/new">add your favorite place</a>
+            </p>
+        </div>
+    </header>
+
+    <div class="row" style="display: flex; flex-wrap: wrap;">
+        <%for(var i = 0; i < scenes.length; i ++) { %>
+            <div class="col-md-4 col-sm-6">
+                <div class="img-fluid img-thumbnail">
+                    <img class="img-fluid img-rounded" src="<%=scenes[i].url%>" width="400px" height="300px">
+                    <div class="caption">
+                        <h6><%=scenes[i].name%></h6>
+                    </div>
+                    <p>
+                        <a href="/senerio/<%=scenes[i].id%>" class="btn btn-primary">More info</a>
+                    </p>
+                </div>
+            </div>
+        <%}%>
+    </div>
+</div>
+
+
+<%include ./partials/footer.ejs%>

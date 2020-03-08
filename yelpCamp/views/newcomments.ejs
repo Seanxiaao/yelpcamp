@@ -1,0 +1,16 @@
+<%include ./partials/header.ejs%>
+
+<div class="container">
+    <h1 style="text-align: center">Add your comment to <%=data.name%></h1>
+    <div style="width: 30%; margin: 20px auto;">
+        <form action="/senerio/<%=data._id%>/comments/new" method="post">
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="text" name="text">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+            </div>
+        </form>
+        <a href="/senerio/<%=data._id%>">Go Back</a>
+    </div>
+</div>
